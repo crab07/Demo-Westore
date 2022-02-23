@@ -1,4 +1,11 @@
-<!--index.wxml-->
-<view class="container">
-  
+<!-- miniprogram/pages/index/index.wxml -->
+<view class="prize-page-container">
+  <view class="prize-form">
+    <p class="prize-form-title">奖品兑换</p>
+    <view class="prize-form-input">
+      <t-input id="phone" value="{{ phone }}" bindchange="onFormItemChange" placeholder="手机号" type="number" maxlength="11" clearable="true" />
+      <t-input id="code" value="{{ code }}" bindchange="onFormItemChange" placeholder="兑换码" type="text" maxlength="16" clearable="true" />
+    </view>
+    <t-button bindtap="onSubmit" t-class="prize-form-submit" theme="primary" size="large" icon="gift">开始兑换</t-button>
+  </view>
 </view>
